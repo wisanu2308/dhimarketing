@@ -42,7 +42,7 @@
 
 				<li><a href="{{url('#')}}">หน้าแรก</a></li>
 				<li><a href="{{url('#')}}">สินค้า</a></li>
-				<li><a href="{{url('#')}}">สมาชิก</a></li>
+				<li><a href="{{url('login')}}">สมาชิก</a></li>
 
 			</ul>
 		</div>

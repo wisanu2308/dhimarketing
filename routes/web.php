@@ -17,6 +17,9 @@
 
 Route::get("/", 'MainController@index');
 
+Route::get("login", 'MemberController@loginform');
+Route::get("member/login", 'MemberController@login');
+
 
 
 ## EXAMPLE
