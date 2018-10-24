@@ -1,6 +1,6 @@
 @extends("layout.layout")
 
-@section("stlye")
+@section("style")
 
 @endsection
 

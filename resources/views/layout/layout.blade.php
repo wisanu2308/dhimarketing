@@ -14,13 +14,21 @@
 		.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 		    background-color: #D5D5D5;
 		}
+
+		body {
+			background-repeat:no-repeat; 
+			background-position:center; 
+			background-size:cover; 
+			padding:10px;
+			background-color: #ECECEC;
+
+		}
+
 	</style>
 
 	@yield("style")
 	
 <body>
-
-
 
 <nav class="navbar navbar-default">
 	<div class="container-fluid">

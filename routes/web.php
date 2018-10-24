@@ -18,7 +18,7 @@
 Route::get("/", 'MainController@index');
 
 Route::get("login", 'MemberController@loginform');
-Route::get("member/login", 'MemberController@login');
+Route::post("member/login", 'MemberController@login');
 
 
 
