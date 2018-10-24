@@ -19,6 +19,8 @@ Route::get("/", 'MainController@index');
 
 Route::get("login", 'MemberController@loginform');
 Route::post("member/login", 'MemberController@login');
+Route::get("member/profile", 'MemberController@profile');
+Route::get("logout", 'MemberController@logout');
 
 
 

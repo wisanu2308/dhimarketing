@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 /**
  * 
  */
@@ -13,9 +14,16 @@ class MainController
 		# code...
 	}
 
-	function index(){
+	function index(Request $request){
 
-		return view('index');
+		$session = $request->session()->all();
+		$userid = isset($session["userid"]) ? $session["userid"] : "";
+
+		$pageElements = [
+			"session_userid" => $userid,
+		];
+
+		return view('index', $pageElements);
 	}
 }
 

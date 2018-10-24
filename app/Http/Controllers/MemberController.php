@@ -17,17 +17,23 @@ class MemberController
 		# code...
 	}
 
-	function loginform(){
+	function loginform(Request $request){
 
-		return view('member.login');
+		$session = $request->session()->all();
+		$userid = isset($session["userid"]) ? $session["userid"] : "";
+
+		$pageElements = [
+			"session_userid" => $userid,
+		];
+
+		return view('member.login', $pageElements);
 	}
 
 	function login(Request $request){
 		
+
 		$post = $request->all();
 		
-		// dd($post);
-
 		if ($post) {
 
 			### model -> login()
@@ -37,7 +43,7 @@ class MemberController
 			session([
 				'userid' => 'TEST001',
 				'username' => $post["txtusername"],
-				// 'member_name' => $login_data[0]->member_name,
+				'member_name' => "Test User"
 			]);
 
 			$session = $request->session()->all();
@@ -46,6 +52,28 @@ class MemberController
 			return redirect('/');
 		}
 
+	}
+
+	function logout(Request $request){
+
+		$request->session()->flush();
+		return redirect('/');
+
+	}
+
+	function profile(Request $request){
+
+		$session = $request->session()->all();
+		$userid = isset($session["userid"]) ? $session["userid"] : "";
+
+
+
+
+		$pageElements = [
+			"session_userid" => $userid,
+		];
+
+		return view('member.profile', $pageElements);
 	}
 }
 

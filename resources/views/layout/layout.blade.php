@@ -48,9 +48,23 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 
-				<li><a href="{{url('#')}}">หน้าแรก</a></li>
+				<li><a href="{{url('/')}}">หน้าแรก</a></li>
 				<li><a href="{{url('#')}}">สินค้า</a></li>
-				<li><a href="{{url('login')}}">สมาชิก</a></li>
+
+				<?php $session_userid = isset($session_userid) ? $session_userid : ""; ?>
+				<?php if ($session_userid == ""){ ?>
+					<li><a href="{{url('login')}}">สมาชิก</a></li>
+				<?php } else { ?>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							สมาชิก ({{$session_userid}}) <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="{{url('member/profile')}}">Profile</a></li>
+							<li><a href="{{url('logout')}}">Logout</a></li>
+						</ul>
+					</li>
+				<?php } ?>
 
 			</ul>
 		</div>
