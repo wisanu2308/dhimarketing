@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 /**
  * 
  */
@@ -14,9 +16,9 @@ class MainController
 		# code...
 	}
 
-	function index(Request $request){
+	function index(){
 
-		$session = $request->session()->all();
+		$session = session()->all();
 		$userid = isset($session["userid"]) ? $session["userid"] : "";
 
 		$pageElements = [

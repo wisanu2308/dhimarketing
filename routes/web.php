@@ -15,6 +15,9 @@
 //     return view('welcome');
 // });
 
+## EXAMPLE
+## Route::get("LINK", 'CONTROLLER@FUNCTION');
+
 Route::get("/", 'MainController@index');
 
 Route::get("login", 'MemberController@loginform');
@@ -24,5 +27,12 @@ Route::get("logout", 'MemberController@logout');
 
 
 
-## EXAMPLE
-## Route::get("menu_privileges/view", 'Privileges\MenuPrivilegesController@index');
+Route::get("/dhioffice", 'AdminController@index');
+Route::get("/dhioffice/manage_product", 'AdminController@manage_product');
+
+
+
+
+
+
+

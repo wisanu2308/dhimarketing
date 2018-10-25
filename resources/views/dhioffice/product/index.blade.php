@@ -1,4 +1,4 @@
-@extends("layout.layout")
+@extends("layout.layout_admin")
 
 @section("style")
 
@@ -6,7 +6,10 @@
 
 
 @section("htmlBody")
+	
 
-	Hello
+Manage Product
+
+
 
 @endsection

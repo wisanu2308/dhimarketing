@@ -1,4 +1,4 @@
-@extends("layout.layout")
+@extends("layout.layout_admin")
 
 @section("style")
 
@@ -6,7 +6,11 @@
 
 
 @section("htmlBody")
+	
 
-	Hello
+	
+	Hello Admin
+
+
 
 @endsection

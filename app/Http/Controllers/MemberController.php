@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 use App\Models\LoginModel as LoginModel;
 
@@ -17,9 +18,9 @@ class MemberController
 		# code...
 	}
 
-	function loginform(Request $request){
+	function loginform(){
 
-		$session = $request->session()->all();
+		$session = session()->all();
 		$userid = isset($session["userid"]) ? $session["userid"] : "";
 
 		$pageElements = [
@@ -54,20 +55,17 @@ class MemberController
 
 	}
 
-	function logout(Request $request){
+	function logout(){
 
-		$request->session()->flush();
+		session()->flush();
 		return redirect('/');
 
 	}
 
-	function profile(Request $request){
+	function profile(){
 
-		$session = $request->session()->all();
+		$session = session()->all();
 		$userid = isset($session["userid"]) ? $session["userid"] : "";
-
-
-
 
 		$pageElements = [
 			"session_userid" => $userid,
