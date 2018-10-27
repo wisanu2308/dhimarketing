@@ -27,8 +27,10 @@ Route::get("logout", 'MemberController@logout');
 
 
 
-Route::get("/dhioffice", 'AdminController@index');
-Route::get("/dhioffice/manage_product", 'AdminController@manage_product');
+Route::get("dhioffice", 'AdminController@index');
+Route::get("dhioffice/manage_product", 'ManageProductController@manage_product');
+Route::get("dhioffice/add_product", 'ManageProductController@add_product_view');
+Route::post("dhioffice/save", 'ManageProductController@save_product');
 
 
 

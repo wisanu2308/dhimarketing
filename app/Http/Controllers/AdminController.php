@@ -27,16 +27,6 @@ class AdminController
 		return view('dhioffice.index', $pageElements);
 	}
 
-	function manage_product(){
-
-
-		$pageElements = [
-			
-		];
-
-		return view('dhioffice/product.index', $pageElements);
-
-	}
 }
 
  ?>
