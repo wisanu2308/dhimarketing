@@ -11,7 +11,7 @@
 	<h1>เพิ่มรายการสินค้า <small>Subtext for header</small></h1>
 </div>
 
-<form action="{{url('dhioffice/save')}}" method="post">
+<form action="{{url('dhioffice/save_product')}}" method="post">
 	{{ csrf_field() }}	
 
 	<div class="form-group">
@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="form-group">
-		<button class="btn btn-primary" type="submit">เพิ่มข้อมูล</button>
+		<button class="btn btn-primary btn-sm" type="submit">เพิ่มข้อมูล</button>
 	</div>
 
 </form>

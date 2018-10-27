@@ -7,7 +7,7 @@
 
 @section("htmlBody")
 	
-<a href="{{url('dhioffice/add_product')}}" type="button" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> เพิ่มรายการสินค้า</a>
+<a href="{{url('dhioffice/add_product')}}" type="button" class="btn btn-primary btn-sm"><i class="glyphicon glyphicon-plus"></i> เพิ่มรายการสินค้า</a>
 
 <table border="1">
 

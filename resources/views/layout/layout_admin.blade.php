@@ -58,7 +58,7 @@
 				<?php } else { ?>
 
 					<li><a href="{{url('dhioffice/manage_product')}}">จัดการสินค้า</a></li>
-					<li><a href="{{url('#')}}">จัดการสมาชิก</a></li>
+					<li><a href="{{url('dhioffice/manage_member')}}">จัดการสมาชิก</a></li>
 					<li><a href="{{url('#')}}">จัดการกองทุน</a></li>
 					<li><a href="{{url('#')}}">รายงาน</a></li>
 
