@@ -25,16 +25,22 @@ Route::post("member/login", 'MemberController@login');
 Route::get("member/profile", 'MemberController@profile');
 Route::get("logout", 'MemberController@logout');
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Route::get("dhioffice", 'AdminController@index');
 Route::get("dhioffice/manage_product", 'ManageProductController@manage_product');
 Route::get("dhioffice/add_product", 'ManageProductController@add_product_view');
 Route::post("dhioffice/save_product", 'ManageProductController@save_product');
+
 Route::get("dhioffice/manage_member", 'ManageMemberController@manage_member');
 Route::get("dhioffice/add_member", 'ManageMemberController@add_member_view');
 Route::post("dhioffice/save_member", 'ManageMemberController@save_member');
 
+Route::get("dhioffice/manage_teamgroup", 'ManageTeamGroupController@manage_teamgroup');
+Route::get("dhioffice/add_teamgroup", 'ManageTeamGroupController@add_teamgroup_view');
+Route::post("dhioffice/save_teamgroup", 'ManageTeamGroupController@save_teamgroup');
 
 
 

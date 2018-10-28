@@ -22,31 +22,16 @@ class TeamGroupModel
 		return $result;
 	}
 
-	public static function save_member($post){
+	public static function save_teamgroup($post){
 		
-		$memberid = "9999999999";
-		$teamid = $post["txt_membergroup"];
-		$name = $post["txt_membername"];
-		$surname = $post["txt_membersurname"];
-		$username = $post["txt_username"];
-		$password = $post["txt_password"];
+		$teamname = $post["txt_new_group"];
 
 		$sqlStatement = "
-			INSERT INTO member
+			INSERT INTO teamgroup
 			(
-				memberid,
-				teamid,
-				name,
-				surname,
-				username,
-				password
+				teamname
 			) VALUES (
-				".$memberid.",
-				".$teamid.",
-				".$name.",
-				".$surname.",
-				".$username.",
-				".$password."
+				'".$teamname."'
 			)
 
 		";

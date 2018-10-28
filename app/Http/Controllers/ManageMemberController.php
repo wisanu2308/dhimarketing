@@ -21,7 +21,7 @@ class ManageMemberController
 	function manage_member(){
 
 
-		$memberData = array();
+		$memberData = MemberModel::member_data();
 
 		$pageElements = [
 			"memberData" => $memberData,

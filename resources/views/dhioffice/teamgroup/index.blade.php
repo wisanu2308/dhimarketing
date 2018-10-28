@@ -18,9 +18,9 @@
 
 
 @section("htmlBody")
-	
-<a href="{{url('dhioffice/add_member')}}" type="button" class="btn btn-primary btn-sm">
-	<i class="glyphicon glyphicon-plus"></i> เพิ่มสมาชิก
+
+<a href="{{url('dhioffice/add_teamgroup')}}" type="button" class="btn btn-primary btn-sm">
+	<i class="glyphicon glyphicon-plus"></i> เพิ่มกลุ่มสมาชิก
 </a>
 
 <br>
@@ -29,18 +29,14 @@
 <div class="table-responsive">
 <table class="table table-bordered table-hover table-style">
 	<tr>
-		<th>Member ID</th>
-		<th>Member Team</th>
-		<th>Member Name</th>
-		<th>Username</th>
+		<th>Group No.</th>
+		<th>Team Group Name</th>
 	</tr>
-	<?php foreach ($memberData as $key => $value): ?>
+	<?php foreach ($teamgroupData as $key => $value): ?>
 	
 	<tr>
-		<td>{{$value->memberid}}</td>	
+		<td>{{$value->teamid}}</td>	
 		<td>{{$value->teamname}}</td>	
-		<td>{{$value->memberfullname}}</td>	
-		<td>{{$value->username}}</td>	
 	</tr>	
 
 	<?php endforeach ?>

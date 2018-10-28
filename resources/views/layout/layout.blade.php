@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.css')}}" />
 
+
 </head>
 
 	<style type="text/css">
@@ -87,6 +88,7 @@
 
 <script type="text/javascript" src="{{asset("plugins/jquery/js/jquery.min.js")}}"></script>
 <script type="text/javascript" src="{{asset("plugins/bootstrap/js/bootstrap.js")}}"></script>
+<script type="text/javascript" src="{{asset("plugins//jquery-ui//jquery-ui.js")}}"></script>
 
 @yield("script")
 

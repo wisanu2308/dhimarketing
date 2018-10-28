@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> DHI </title>
+	<title> DHI Office</title>
 
 	<link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.css')}}" />
+	<link rel="stylesheet" href="{{asset('plugins/jquery-ui/jquery-ui.css')}}" />
 
 </head>
 
@@ -58,9 +59,18 @@
 				<?php } else { ?>
 
 					<li><a href="{{url('dhioffice/manage_product')}}">จัดการสินค้า</a></li>
-					<li><a href="{{url('dhioffice/manage_member')}}">จัดการสมาชิก</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							จัดการสมาชิก <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="{{url('dhioffice/manage_member')}}">รายชื่อสมาชิก</a></li>
+							<li><a href="{{url('dhioffice/manage_teamgroup')}}">รายชื่อกลุ่มสมาชิก</a></li>
+						</ul>
+					</li>
 					<li><a href="{{url('#')}}">จัดการกองทุน</a></li>
 					<li><a href="{{url('#')}}">รายงาน</a></li>
+					<li><a href="{{url('#')}}">จัดการข้อมูล</a></li>
 
 				<?php } ?>
 
@@ -81,6 +91,7 @@
 
 <script type="text/javascript" src="{{asset("plugins/jquery/js/jquery.min.js")}}"></script>
 <script type="text/javascript" src="{{asset("plugins/bootstrap/js/bootstrap.js")}}"></script>
+<script type="text/javascript" src="{{asset("plugins/jquery-ui/jquery-ui.js")}}"></script>
 
 @yield("script")
 
