@@ -50,6 +50,30 @@ class ManageMemberController
 
 		return redirect('dhioffice/manage_member');
 	}
+
+	function edit_member($memberid){
+
+		$memberData = MemberModel::member_data();
+		$teamgroupData = TeamGroupModel::teamgroup_data();
+
+		$pageElements = [
+			"memberData" => $memberData,
+			"teamgroupData" => $teamgroupData,
+		];
+
+		return view('dhioffice/member.edit_form', $pageElements);
+	}
+
+	function update_member(Request $request){
+
+		$post = $request->all();
+		MemberModel::update_member($post);
+		return redirect('dhioffice/manage_member');
+	}
+
+
+	
+
 }
 
  ?>

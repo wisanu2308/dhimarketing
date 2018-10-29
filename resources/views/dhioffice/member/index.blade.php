@@ -12,6 +12,11 @@
 			background-color: #CCCCCC;
 		}
 
+		.table > tbody > tr > td{
+			vertical-align: middle;
+		}
+
+
 	</style>
 
 @endsection
@@ -33,6 +38,7 @@
 		<th>Member Team</th>
 		<th>Member Name</th>
 		<th>Username</th>
+		<th>คำสั่ง</th>
 	</tr>
 	<?php foreach ($memberData as $key => $value): ?>
 	
@@ -41,6 +47,10 @@
 		<td>{{$value->teamname}}</td>	
 		<td>{{$value->memberfullname}}</td>	
 		<td>{{$value->username}}</td>	
+		<td>
+			<a href="{{url('dhioffice/edit_member').'/'.$value->memberid}}" type="button" class="btn btn-info btn-sm">แก้ไข</a>
+			<a href="{{url('dhioffice/update_membe').'/'.$value->memberid}}" type="button" class="btn btn-danger btn-sm">ลบ</a>
+		</td>	
 	</tr>	
 
 	<?php endforeach ?>
