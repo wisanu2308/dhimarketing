@@ -20,7 +20,6 @@ class ManageMemberController
 
 	function manage_member(){
 
-
 		$memberData = MemberModel::member_data();
 
 		$pageElements = [
@@ -46,6 +45,7 @@ class ManageMemberController
 
 		$post = $request->all();
 
+		$post["savememberid"] = MemberModel::latest_member();
 		MemberModel::save_member($post);
 
 		return redirect('dhioffice/manage_member');
@@ -53,7 +53,7 @@ class ManageMemberController
 
 	function edit_member($memberid){
 
-		$memberData = MemberModel::member_data();
+		$memberData = MemberModel::find_member_data($memberid);
 		$teamgroupData = TeamGroupModel::teamgroup_data();
 
 		$pageElements = [
@@ -68,6 +68,11 @@ class ManageMemberController
 
 		$post = $request->all();
 		MemberModel::update_member($post);
+		return redirect('dhioffice/manage_member');
+	}
+
+	function delete_member($memberid){
+		MemberModel::delete_member($memberid);
 		return redirect('dhioffice/manage_member');
 	}
 

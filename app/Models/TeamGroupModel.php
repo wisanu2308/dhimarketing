@@ -22,6 +22,22 @@ class TeamGroupModel
 		return $result;
 	}
 
+	public static function find_teamgroup_data($teamid){
+
+		$sqlStatement = "
+			SELECT
+			teamgroup.teamid,
+			teamgroup.teamname
+			FROM
+			teamgroup
+			WHERE teamid = '".$teamid."'
+			order by teamid
+		";
+
+		$result = Db::select($sqlStatement);
+		return $result;
+	}
+
 	public static function save_teamgroup($post){
 		
 		$teamname = $post["txt_new_group"];
@@ -36,7 +52,30 @@ class TeamGroupModel
 
 		";
 		Db::select($sqlStatement);
+	}
+
+	public static function update_teamgroup($post){
 		
+		$teamid = $post["ref_txt_teamid"];
+		$teamname = $post["txt_teamname"];
+
+		$sqlStatement = "
+			UPDATE teamgroup 
+			SET 
+				teamname = '".$teamname."'
+
+			WHERE teamid = '".$teamid."'
+		";
+		Db::select($sqlStatement);
+	}
+
+	public static function delete_teamgroup($teamid){
+
+		$sqlStatement = "
+			DELETE FROM teamgroup WHERE teamid = '".$teamid."'
+		";
+		Db::select($sqlStatement);
+
 	}
 
 }

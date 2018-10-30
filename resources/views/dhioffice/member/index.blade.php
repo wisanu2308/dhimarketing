@@ -49,7 +49,7 @@
 		<td>{{$value->username}}</td>	
 		<td>
 			<a href="{{url('dhioffice/edit_member').'/'.$value->memberid}}" type="button" class="btn btn-info btn-sm">แก้ไข</a>
-			<a href="{{url('dhioffice/update_membe').'/'.$value->memberid}}" type="button" class="btn btn-danger btn-sm">ลบ</a>
+			<a href="{{url('dhioffice/delete_member').'/'.$value->memberid}}" type="button" class="btn btn-danger btn-sm">ลบ</a>
 		</td>	
 	</tr>	
 

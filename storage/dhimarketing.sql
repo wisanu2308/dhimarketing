@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-10-29 23:51:48
+Date: 2018-10-31 00:30:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `member`;
 CREATE TABLE `member` (
-  `memberid` int(11) NOT NULL,
+  `memberid` varchar(11) NOT NULL,
   `teamid` int(11) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   `surname` varchar(255) DEFAULT NULL,
@@ -32,7 +32,8 @@ CREATE TABLE `member` (
 -- ----------------------------
 -- Records of member
 -- ----------------------------
-INSERT INTO `member` VALUES ('99999', '1', 'ชื่อจริง', 'นามสกุล', 'user1', 'user1');
+INSERT INTO `member` VALUES ('ID000002', '1', 'Jamesaaa', 'name1', 'user1', 'user1');
+INSERT INTO `member` VALUES ('ID000003', '1', 'Jamesaaa', '1234', 'user1', 'user1');
 
 -- ----------------------------
 -- Table structure for member_teamgroup
@@ -40,13 +41,16 @@ INSERT INTO `member` VALUES ('99999', '1', 'ชื่อจริง', 'นา�
 DROP TABLE IF EXISTS `member_teamgroup`;
 CREATE TABLE `member_teamgroup` (
   `ref_teamid` varchar(11) NOT NULL,
-  `ref_memberid` int(11) DEFAULT NULL
+  `ref_memberid` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of member_teamgroup
 -- ----------------------------
-INSERT INTO `member_teamgroup` VALUES ('1', '99999');
+INSERT INTO `member_teamgroup` VALUES ('7', 'ID000001');
+INSERT INTO `member_teamgroup` VALUES ('7', 'ID000001');
+INSERT INTO `member_teamgroup` VALUES ('1', 'ID000002');
+INSERT INTO `member_teamgroup` VALUES ('1', 'ID000003');
 
 -- ----------------------------
 -- Table structure for product
@@ -71,12 +75,13 @@ CREATE TABLE `teamgroup` (
   `teamid` int(11) NOT NULL AUTO_INCREMENT,
   `teamname` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`teamid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of teamgroup
 -- ----------------------------
 INSERT INTO `teamgroup` VALUES ('1', 'team');
 INSERT INTO `teamgroup` VALUES ('2', 'test');
-INSERT INTO `teamgroup` VALUES ('3', 'qqqqq');
-INSERT INTO `teamgroup` VALUES ('4', 'asdasda');
+INSERT INTO `teamgroup` VALUES ('6', 'ทดสอบ');
+INSERT INTO `teamgroup` VALUES ('7', 'ทดสอบ1');
+INSERT INTO `teamgroup` VALUES ('8', 'test');

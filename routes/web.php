@@ -39,12 +39,14 @@ Route::get("dhioffice/add_member", 'ManageMemberController@add_member_view');
 Route::post("dhioffice/save_member", 'ManageMemberController@save_member');
 Route::get("dhioffice/edit_member/{memberid}", 'ManageMemberController@edit_member');
 Route::post("dhioffice/update_member", 'ManageMemberController@update_member');
+Route::get("dhioffice/delete_member/{memberid}", 'ManageMemberController@delete_member');
 
 Route::get("dhioffice/manage_teamgroup", 'ManageTeamGroupController@manage_teamgroup');
 Route::get("dhioffice/add_teamgroup", 'ManageTeamGroupController@add_teamgroup_view');
 Route::post("dhioffice/save_teamgroup", 'ManageTeamGroupController@save_teamgroup');
-Route::post("dhioffice/edit_teamgroup/{teamgroupid}", 'ManageTeamGroupController@edit_teamgroup');
+Route::get("dhioffice/edit_teamgroup/{teamgroupid}", 'ManageTeamGroupController@edit_teamgroup');
 Route::post("dhioffice/update_teamgroup", 'ManageTeamGroupController@update_teamgroup');
+Route::get("dhioffice/delete_teamgroup/{teamgroupid}", 'ManageTeamGroupController@delete_teamgroup');
 
 
 

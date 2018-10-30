@@ -24,6 +24,7 @@
 
 <form action="{{url('dhioffice/update_member')}}" method="post">
 	{{ csrf_field() }}	
+	<input type="hidden" name="ref_txt_memberid" value="{{$memberData['0']->memberid}}">
 
 	<div class="form-group">
 		<label>กลุ่มสมาชิก</label>
@@ -54,7 +55,7 @@
 		<input class="form-control" type="text" name="txt_password" value="" style="width: 200px;display: inline-block;" readonly> 
 	</div>
 
-	<div class="form-group" style="display: none;">
+	<div class="form-group">
 		<button class="btn btn-primary btn-sm" type="submit">บันทึกข้อมูล</button>
 	</div>
 

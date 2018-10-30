@@ -85,7 +85,7 @@
 		        data: {
 		        	"_token": "{{ csrf_token() }}",
 		        	"txt_new_group": $("#txt_new_group").val(),
-		        	"add_member_method": "yes"
+		        	"add_dialog_method": "yes"
 		        },
 		        beforeSend: function(data){ console.log(data); },
 		        success: function(data){
