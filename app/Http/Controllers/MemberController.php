@@ -31,14 +31,13 @@ class MemberController
 	}
 
 	function login(Request $request){
-		
 
 		$post = $request->all();
-		
-		if ($post) {
+
+		if (isset($post["txtusername"]) && isset($post["txtusername"])) {
 
 			### model -> login()
-			// $login_data = LoginModel::memberLogin($post);
+			$login_data = LoginModel::memberLogin($post);
 			######################
 
 			session([
@@ -47,10 +46,14 @@ class MemberController
 				'member_name' => "Test User"
 			]);
 
-			$session = $request->session()->all();
+			// $session = $request->session()->all();
 			// dd($session);
 
 			return redirect('/');
+		} else {
+
+			$request->session()->flash('status', 'Task was successful!');
+			return redirect('login');
 		}
 
 	}

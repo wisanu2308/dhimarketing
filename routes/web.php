@@ -30,9 +30,13 @@ Route::get("logout", 'MemberController@logout');
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Route::get("dhioffice", 'AdminController@index');
+
 Route::get("dhioffice/manage_product", 'ManageProductController@manage_product');
 Route::get("dhioffice/add_product", 'ManageProductController@add_product_view');
 Route::post("dhioffice/save_product", 'ManageProductController@save_product');
+Route::get("dhioffice/edit_product/{productid}", 'ManageProductController@edit_product');
+Route::post("dhioffice/update_product", 'ManageProductController@update_product');
+Route::get("dhioffice/delete_product/{productid}", 'ManageProductController@delete_product');
 
 Route::get("dhioffice/manage_member", 'ManageMemberController@manage_member');
 Route::get("dhioffice/add_member", 'ManageMemberController@add_member_view');
@@ -47,6 +51,8 @@ Route::post("dhioffice/save_teamgroup", 'ManageTeamGroupController@save_teamgrou
 Route::get("dhioffice/edit_teamgroup/{teamgroupid}", 'ManageTeamGroupController@edit_teamgroup');
 Route::post("dhioffice/update_teamgroup", 'ManageTeamGroupController@update_teamgroup');
 Route::get("dhioffice/delete_teamgroup/{teamgroupid}", 'ManageTeamGroupController@delete_teamgroup');
+
+
 
 
 

@@ -20,24 +20,10 @@
 	</div>
 
 	<div class="form-group">
-		<label>ชื่อสินค้า1</label>
-		<input class="form-control" type="text" name="txt_productname1" value="" style="width: 200px;"> 
+		<label>คำอธิบาย</label>
+		<input class="form-control" type="text" name="txt_productdesc" value="" style="width: 200px;"> 
 	</div>
 
-	<div class="form-group">
-		<label>ชื่อสินค้า2</label>
-		<input class="form-control" type="text" name="txt_productname2" value="" style="width: 200px;"> 
-	</div>
-
-	<div class="form-group">
-		<label>ชื่อสินค้า3</label>
-		<input class="form-control" type="text" name="txt_productname3" value="" style="width: 200px;"> 
-	</div>
-
-	<div class="form-group">
-		<label>ชื่อสินค้า4</label>
-		<input class="form-control" type="text" name="txt_productname4" value="" style="width: 200px;"> 
-	</div>
 
 	<div class="form-group">
 		<button class="btn btn-primary btn-sm" type="submit">เพิ่มข้อมูล</button>

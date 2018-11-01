@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-10-31 00:30:24
+Date: 2018-11-02 00:06:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,7 +57,7 @@ INSERT INTO `member_teamgroup` VALUES ('1', 'ID000003');
 -- ----------------------------
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
-  `productid` int(11) NOT NULL,
+  `productid` varchar(11) NOT NULL,
   `product_name` varchar(255) DEFAULT NULL,
   `product_desc` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`productid`)
@@ -66,6 +66,7 @@ CREATE TABLE `product` (
 -- ----------------------------
 -- Records of product
 -- ----------------------------
+INSERT INTO `product` VALUES ('PD000001', 'BNK48', 'CakeCake');
 
 -- ----------------------------
 -- Table structure for teamgroup
